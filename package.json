@@ -5,19 +5,23 @@
   "main": "index.js",
   "author": "Leanne Bayliss",
   "license": "MIT",
+  "scripts": {
+    "start": "yarn build && node ./build/index.js",
+    "build": "npx tsc",
+    "lint": "./node_modules/eslint/bin/eslint.js ./src",
+    "unit:test": "echo 'unit tests not implemented'",
+    "integration:test": "echo 'integration tests not implemented'"
+  },
   "devDependencies": {
     "@types/node": "^18.7.6",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
     "eslint": "^8.22.0",
+    "nodemon": "^2.0.19",
     "typescript": "^4.7.4"
   },
-  "scripts": {
-    "start": "yarn build && node ./build/index.js",
-    "lint": "echo 'linting not implemented'",
-    "unit:test": "echo 'unit tests not implemented'",
-    "integration:test": "echo 'integration tests not implemented'",
-    "build": "npx tsc"
-  },
-  "eslintIgnore": [".eslintrc.js"]
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "express": "^4.18.1"
+  }
 }
