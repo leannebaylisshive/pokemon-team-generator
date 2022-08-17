@@ -19,7 +19,7 @@ jobs:
       - name: Install Dependencies
         run: yarn install
       - name: Run Unit Tests
-        run: yarn run unit:tests
+        run: yarn run unit:test
       - run: echo "🍏 This job's status is ${{ job.status }}."
   Run-Integration-Test:
     runs-on: ubuntu-latest
@@ -29,5 +29,5 @@ jobs:
       - name: Install Dependencies
         run: yarn install
       - name: Run Unit Tests
-        run: yarn run integration:tests
+        run: yarn run integration:test
       - run: echo "🍏 This job's status is ${{ job.status }}."
