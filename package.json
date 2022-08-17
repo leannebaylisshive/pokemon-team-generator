@@ -6,9 +6,11 @@
   "author": "Leanne Bayliss",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./src/index.ts -w ./src/**/*",
-    "build": "yarn lint && npx tsc",
-    "lint": "./node_modules/eslint/bin/eslint.js ./src"
+    "start": "yarn build && node ./build/index.js",
+    "build": "npx tsc",
+    "lint": "./node_modules/eslint/bin/eslint.js ./src",
+    "unit:test": "echo 'unit tests not implemented'",
+    "integration:test": "echo 'integration tests not implemented'"
   },
   "devDependencies": {
     "@types/node": "^18.7.6",
