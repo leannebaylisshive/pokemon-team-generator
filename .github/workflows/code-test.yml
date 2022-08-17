@@ -1,0 +1,33 @@
+name: Code Test
+on: [push]
+jobs:
+  Run-Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: yarn install
+      - name: Run ESLint
+        run: yarn run lint
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+  Run-Unit-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: yarn install
+      - name: Run Unit Tests
+        run: yarn run unit:test
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+  Run-Integration-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: yarn install
+      - name: Run Unit Tests
+        run: yarn run integration:test
+      - run: echo "🍏 This job's status is ${{ job.status }}."
