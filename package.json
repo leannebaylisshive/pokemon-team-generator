@@ -15,6 +15,8 @@
   "scripts": {
     "start": "yarn build && node ./build/index.js",
     "lint": "echo 'linting not implemented'",
+    "unit:test": "echo 'unit tests not implemented'",
+    "integration:test": "echo 'integration tests not implemented'",
     "build": "npx tsc"
   },
   "eslintIgnore": [".eslintrc.js"]
