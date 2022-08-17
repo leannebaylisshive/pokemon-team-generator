@@ -24,4 +24,3 @@ jobs:
       - uses: yarn install
       - name: Run ESLint
       - run: yarn run lint
-      
