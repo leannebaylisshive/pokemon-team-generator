@@ -4,10 +4,10 @@ jobs:
   Run-Lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
+      - name: Run ESLint Check
       - uses: actions/checkout@v3
-      - name: Install Dependencies
-      - uses: yarn install
-      - run: echo "Run ESLint"
+      - run: echo "Installing Dependencies..."
+      - run: yarn install
+      - run: echo "Running ESLint..."
       - run: yarn run lint
       - run: echo "🍏 This job's status is ${{ job.status }}."
